@@ -1,4 +1,3 @@
-const ipAddress = "47.229.12.46"
 const local = "localhost"
 const rpi = "192.168.1.103"
 
