@@ -1,0 +1,5 @@
+{
+    "target": {
+        "baseURL": "http://ws.audioscrobbler.com/2.0/?format=json&api_key=fab735743b14f0d56e2aa6bf54ac0faa"
+    }
+}

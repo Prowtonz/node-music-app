@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Music Search</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+    <body>
+        <div id="lastfm" class="container-fluid" v-cloak>
+            <h3 class="search-bar-text">Song Search</h3>
+            <p style="text-align: center">Search for any song by track name</p>
+            <hr class="line-break">
+            <div class="search-div">
+                <input type="text" class="form-control search-bar" placeholder="Search" v-model="trackName" @keyup.enter="searchTrack"/>
+                <button class="btn btn-primary" @click="searchTrack">Search</button>
+            </div>
+            <section class="search-results-table" v-show="searchResults.length">
+                <p class="search-results-p">Search Results: {{getResponseLength}}</p>
+                <table class="table table-borderless table-hover">
+                    <tbody>
+                        <tr v-for="result in searchResults" style="cursor: pointer">
+                                <td class="table-data-left" @click=fetchData(result.mbid)>{{result.name}} by {{result.artist}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div v-show="areResultsPresent" class="fetch-data">
+                <img v-bind:src="fetchResults.image" class="image-styling"/>
+                <p><span><strong>Name: </strong>{{fetchResults.name}}</span></p>
+                <p><span><strong>Artist: </strong>{{fetchResults.artist}}</span></p>
+                <p><span><strong>Album: </strong>{{fetchResults.album}}</span></p>
+                <p><span><strong>Play Count: </strong>{{fetchResults.playcount}}</span></p>
+                <p><span><strong>Duration: </strong>{{fetchResults.duration}}</span></p>
+                <p><span><strong>Tags: </strong>{{fetchResults.tags}}</span></p>
+            </div>
+        </div>
+        <script src="https://unpkg.com/vue@2.6.11/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="app.js" text="text/javascript"></script>
+    </body>
+</html>
