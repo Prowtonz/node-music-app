@@ -1,0 +1,55 @@
+[v-cloak] > * { display:none; }
+
+.fetch-data {
+    text-align: center;
+}
+
+.image-styling {
+    border-radius: 10px;
+    margin-bottom: 50px
+}
+
+.line-break {
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.search-bar {
+    margin: 0 auto; 
+    width: 25%;
+    text-align: center;
+    display: inline-block;
+}
+
+.search-bar-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.search-div {
+    margin-right: 30%;
+    margin-left: 30%;
+    margin-top:20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.search-results-p {
+    text-align: center;
+    font-family: fantasy;
+}
+
+.search-results-table {
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.table-data-left {
+    text-align: left;
+    vertical-align: bottom;
+}
+
+.table-data-center {
+    text-align: center;
+    vertical-align: middle;
+}
